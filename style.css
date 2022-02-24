@@ -1,0 +1,494 @@
+
+:root{
+    --background: #e1f1c8;
+}
+/* Body style */
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.flopTuneHome__cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #e1f1c8;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flopTuneHome__cover .flopTuneHome__logo {
+    height: 250px;
+    width: 250px;
+    margin-right: 10%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Nav-bar */
+
+.flopTuneHome__topbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.flopTuneHome__logo {
+    width: 170px;
+    height: 170px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flopTuneHome__desktop {
+    max-width: 1300px;
+    margin: 0 75px;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#ul {
+    margin: 0 20px;
+    color: #e9e9e9;
+    font-style: bold;
+    font-family: Poppins;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+li {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+li a:hover:not(.active) {
+    background-color: #4a5049;
+    border-radius: 15%;
+}
+
+.flopTuneHome__container {
+    display: flex;
+    align-items: center;
+}
+
+.section1 {
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.flopTuneHome__tagline h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    color: #161515;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+    overflow: hidden;
+}
+
+span{
+    color: #4a5049;
+}
+
+.flopTuneHome__tagline h2 span {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.flopTuneHome__tagline {
+    position: relative;
+}
+
+/* .flopTuneHome__tagline img {
+    position: absolute;
+    bottom: -3%;
+    left: 0;
+    z-index: -10;
+} */
+
+.he {
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 16px;
+    width: 75%;
+    line-height: 27px;
+    letter-spacing: 0.009em;
+    color: #9E9E9E;
+}
+
+.border-search {
+    width: 530px;
+    border-radius: 40px;
+    background: transparent;
+    padding-bottom: 40px;
+}
+
+
+/* Form text input */
+
+.border-search input {
+    padding-left: 20px;
+    width: 282px;
+    height: 55px;
+    float: left;
+    border: 0;
+    background: rgba(66, 66, 66, 0.53);
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.009em;
+    color: #fafafafa;
+    outline: none;
+}
+
+.loader {
+    border: 3px solid white;
+    border-top: 3px solid #187e04;
+    /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input.error_active {
+    border: 1px solid #e33527 !important;
+}
+
+
+/* Form submit button */
+
+.border-search button {
+    overflow: visible;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 55px;
+    width: 230px;
+    font-family: 'Poppins';
+    background: #5cf13e;
+    border-radius: 8px;
+    color: #fafafa;
+    font-size: 15p
+}
+
+.border-search button:hover {
+    background-color: #fafafa;
+    color: rgb(189, 187, 187);
+    filter: blur(.75px);
+}
+
+.flopTuneHome__socialLinks {
+    position: relative;
+    display: flex;
+}
+
+.flopTuneHome__form {
+    width: 100%;
+}
+
+.smile img {
+    height: 430px;
+    width: 430px;
+}
+
+::placeholder {
+    font-family: 'Poppins';
+    font-size: 13px;
+    color: whitesmoke;
+}
+
+.flopTuneHome__socialIcon {
+    background: #69696947;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.flopTuneHome__modalOverlay {
+    background: var(--background);
+    background-blend-mode: darken;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flopTuneHome__modalBox {
+    width: 530px;
+    height: 60%;
+    background: var(--background);
+    border-radius: 8px;
+    color: #4a5049;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flopTuneHome__modalMemojiContainer {
+    background: var(--background);
+    mix-blend-mode: difference;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    border-radius: 164%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flopTuneHome__modalBox h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.flopTuneHome__modalBox p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #9E9E9E;
+    width: 60%;
+}
+
+.flopTuneHome__modalCloseButton {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 55px;
+    width: 185px;
+    font-family: 'Poppins';
+    background: #37ca19;
+    border-radius: 8px;
+    color: #fafafa;
+}
+
+@media (min-width: 600px) {
+    .hee {
+        font-size: 18px;
+    }
+    .flopTuneHome__mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .section1 {
+        padding: 0;
+    }
+    .flopTuneHome__tagline h2 {
+        font-size: 24px;
+        line-height: 44px;
+        width: 100%;
+    }
+    .flopTuneHome__desktop {
+        max-width: 100vw;
+        margin: 0 50px;
+    }
+    .he {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .border-search {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .border-search input {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    .border-search button {
+        width: 282px;
+    }
+    .flopTuneHome__smiletration {
+        width: 100%;
+    }
+    .smile img {
+        width: 100%;
+        height: 100%;
+        width: 120%;
+        height: 100%;
+        margin-left: -20px;
+    }
+}
+
+.returnError {
+    border-radius: 8px;
+    color: red;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-left: 10px;
+    margin-top: 7px;
+}
+
+@media (max-width: 600px) {
+    .flopTuneHome__desktop {
+        display: none;
+    }
+    .returnError {
+        margin-top: -7px;
+    }
+    .flopTuneHome__tagline img {
+        position: absolute;
+        position: absolute;
+        bottom: -12%;
+        left: 20%;
+        z-index: -10;
+    }
+    .flopTuneHome__desc {
+        width: 100%;
+        height: 54px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.009em;
+        color: #9E9E9E;
+    }
+    .flopTuneHome__section1 {
+        margin-top: 55px;
+        padding-left: 6px;
+    }
+    .flopTuneHome__form {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .flopTuneHome__form input {
+        margin-bottom: 15px;
+        padding-left: 20%;
+        width: 100%;
+        height: 48px;
+        border: 0;
+        background: rgb(189, 187, 187);
+        font-family: 'Poppins';
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+        color: #3b3b3bfa;
+        outline: 0;
+    }
+    .flopTuneHome__form button {
+        font-family: 'Poppins';
+        width: 100%;
+        height: 47px;
+        background: #37ca19;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        border: 0;
+        outline: 0;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .flopTuneHome__socialLinks {
+        overflow: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .flopTuneHome__socialLinks li {
+        display: flex;
+        justify-content: center;
+        padding-right: 20px;
+    }
+    .flopTuneHome__socialLinks li:nth-of-type(3) {
+        padding-right: 0;
+    }
+    .flopTuneHome__logo {
+        height: 50px;
+        width: 50px;
+    }
+    .flopTuneHome__tagline {
+        width: 100%;
+        text-align: center;
+        color: #424242;
+        margin-bottom: 18px;
+        position: relative;
+    }
+    .flopTuneHome__tagline h1 {
+        width: 100%;
+        height: 60px;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .flopTuneHome__modalBox {
+        width: 85%;
+    }
+    .flopTuneHome__modalBox h1 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .flopTuneHome__modalBox p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .flopTuneHome__modalCloseButton {
+        height: 45px;
+        width: 145px;
+    }
+}
+
+.flopTuneHome__mobile {
+    padding: 0 35px;
+    margin-top: 34px;
+}
