@@ -42,7 +42,7 @@ const validate = async (buttonEl, inputField, errorField) => {
         headers:{
           'Content-Type': 'application/json'        
         },
-        body: JSON.stringify({ email: inputField.value})
+        body: JSON.stringify({ "email": inputField.value})
       })
       if (response.status !== 201) {
         buttonEl.innerHTML = 'Request Access'
