@@ -39,7 +39,7 @@ const validate = async (buttonEl, inputField, errorField) => {
       await fetch('https://floptune.herokuapp.com/api/addEmail', {
         method: 'POST',
         mode: 'no-cors',
-        headers: {
+        headers:{
           'Content-Type': 'application/json'        
         },
         body: JSON.stringify({ email: inputField.value})
