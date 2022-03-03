@@ -36,34 +36,37 @@ const validate = async (buttonEl, inputField, errorField) => {
       buttonEl.disabled = true
       newSpan.classList.add('loader')
       buttonEl.appendChild(newSpan)
-      await fetch('https://floptune.herokuapp.com/api/addEmail', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers:{
-          'Content-Type': 'application/json'        
-        },
-        body: JSON.stringify({ "email": inputField.value})
-      })
-      if (response.status !== 201) {
+      // Send Ajax for Email Operations https://floptune.herokuapp.com/api/addEmail
+			$.ajax({
+				url: "https://floptune.herokuapp.com/api/addEmail",
+				method: "POST",
+				data: { email: inputField.value },
+				success: function (data) {
+					// console.log(data.email);
+
+					if (data.status == "401") {
+						buttonEl.innerHTML = "Request Access";
+						buttonEl.disabled = false;
+						inputField.classList.add("error_active");
+						errorField.innerHTML = "Email Already Exists!";
+						errorField.style.display = "block";
+						setTimeout(() => {
+							inputField.classList.remove("error_active");
+							errorField.innerHTML = "";
+							errorField.style.display = "none";
+						}, 1500);
+					} else if (data.status == "200") {
+						inputField.value = "";
+						overlayContainer.style.display = "flex";
+						buttonEl.innerHTML = "Request Access";
+						buttonEl.disabled = false;
+					}
+				},
+			});
+    } catch (error) {      
         buttonEl.innerHTML = 'Request Access'
         buttonEl.disabled = false
-        inputField.classList.add('error_active')
-        errorField.innerHTML = "Email Already Exists!"
-        errorField.style.display = 'block'
-        setTimeout(() => {
-          inputField.classList.remove('error_active')
-          errorField.innerHTML = ""
-          errorField.style.display = 'none'
-        }, 1500)
-      } else {
-        inputField.value = ''
-        overlayContainer.style.display = 'flex'  
-        buttonEl.innerHTML = 'Request Access'    
-      }
-    } catch (e) {      
-        buttonEl.innerHTML = 'Request Access'
-        buttonEl.disabled = false
-        alert('Something went wrong, Try Again Later')        
+        alert('Something went wrong, Try Again Later', error)        
     }
     
   }         
